@@ -69,42 +69,34 @@
     document.querySelector('#bai4 span').innerText = `${firstDivBy(5)}`;
 
     // Bai 5
-    function sum5() {
-      let count = 0;
-      let sum = 0;
-      while (count < 21) {
-        sum += fibonacci(count);
-        count++;
+    function sum5(num) {
+      let sum = 0
+      for (let i = 0; i < num; i++) {
+        sum += fibonacci(i);
       }
       return sum;
     }
 
-    document.querySelector('#bai5 span').innerText = sum5();
+    document.querySelector('#bai5 span').innerText = sum5(5);
 
     // Bai 6
-    function sum6() {
+    function sum6(num) {
+      let i = num;
+      let j = 0;
       let sum = 0;
-      let count1 = 0;
-      let count2 = 0;
-      while (count1 < 30) {
-        const fibo = fibonacci(count1)
-        if (fibo % 7 === 0) {
-          sum += fibo;
-          count2++;
-        }
-        count1++;
+
+      while (i < 30) {
+        
       }
-      return sum;
     }
 
-    document.querySelector('#bai6 span').innerText = sum6();
+    document.querySelector('#bai6 span').innerText = sum6(30);
 
     // Bai7
     function printFizzBuzz() {
       let text = '';
       for (let i = 1; i < 101; i++) {
         if (i % 15 === 0) {
-          console.log(i);
           text += 'FizzBuzz ';
         } else if (i % 3 === 0) {
           text += 'Fizz ';
