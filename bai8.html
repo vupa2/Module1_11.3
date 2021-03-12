@@ -15,14 +15,14 @@
       const min = parseInt(prompt('Your min number', '1'));
       const max = parseInt(prompt('Your max number', '3'));
       const winNum = Math.round(Math.random() * (max - min + 1) + min);
-      // let winNum = 5;
+      // const winNum = 5;
       let playLeft = 3;
       let guessNum = parseInt(prompt(`Enter Your Number, play left: ${playLeft}`));
 
       while (guessNum !== winNum) {
         if (playLeft > 1) {
           playLeft--
-          guessNum = parseInt(prompt(`Enter Your Number Again, play left: ${playLeft}`));
+          guessNum = parseInt(prompt(`${guessNum} is incorrect number, play left: ${playLeft}`));
         } else {
           alert('You lose');
           break;
@@ -30,7 +30,7 @@
       }
 
       if (guessNum === winNum) {
-        alert('You win');
+        alert(`You win, ${guessNum} is correct number!!!!!!`);
       }
     }
   </script>
